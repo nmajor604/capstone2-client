@@ -1,21 +1,29 @@
 import { useState } from 'react';
 import React from 'react';
 import axios from 'axios';
+import ImageUpload from '../ImageUpload/ImageUpload';
 
 function NewListing () {
 
     const [price, setPrice ] = useState("");
+    const [itemName, setItemName] = useState("");
+    const [itemTitle, setItemTitle] = useState("");
+    const [itemDescription, setItemDescription] = useState("");
+    const [itemNeighbourhood, setItemNeighbourhood] = useState("");
+
+
+    
     
     const handleSubmit = (e) => {
         e.preventDefault();
             axios
-            .post('http://localhost:5050/listings', {
-                price: e.target.price.value,
-                item_name: e.target.item_name.value,
-                item_title: e.target.item_title.value,
-                item_description: e.target.item_description.value,
+            .post('http://localhost:5050', {
+                price: price,
+                item_name: itemName,
+                item_title: itemTitle,
+                item_description: itemDescription,
                 is_firm: "0",
-                item_neighbourhood: e.target.item_neighbourhood.value,
+                item_neighbourhood: itemNeighbourhood,
                 is_sold: "0"
             })
             .then((res) => {
@@ -48,14 +56,17 @@ function NewListing () {
                             <input
                                 placeholder='What Are You Selling?'
                                 name='item_name'
-                                value={item_name}
+                                value={itemName}
+                                onChange={(e) => setItemName(e.target.value)}
+
                             />
                             </div>
                             <div>
                                 <input
                                     placeholder='Write A Brief Headline'
                                     name='item_title'
-                                    value={item_title}
+                                    value={itemTitle}
+                                    onChange={(e) => setItemTitle(e.target.value)}
                                 />
                             </div>
                             
@@ -63,16 +74,19 @@ function NewListing () {
                                 <input
                                     placeholder='Describe Your Item, Including the Condition'
                                     name='item_description'
-                                    value={item_description}
+                                    value={itemDescription}
+                                    onChange={(e) => setItemDescription(e.target.value)}
                                 />
                             </div>
                             <div>
                                 <input
                                     placeholder='List the Neighbourhood Your Selling In'
                                     name='item_neighbourhood'
-                                    value={item_neighbourhood}
+                                    value={itemNeighbourhood}
+                                    onChange={(e) => setItemNeighbourhood(e.target.value)}
                                 />
                             </div>
+                    <ImageUpload />        
                             
                     
                     
