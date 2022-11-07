@@ -1,6 +1,4 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
-// import './Listings.css';
 import axios from "axios";
 
 class Listings extends React.Component {
@@ -13,32 +11,40 @@ class Listings extends React.Component {
             this.setState({ currentListings: res.data });
             console.log(this.state.currentListings)
         });
+ 
     }
 
+    buyItem(id, item) {
+      axios.patch(`http://localhost:5050/${id}`).then((res) => {
+        const currentListings = this.state.currentListings.filter(item.id !== id);
+        this.setState({ currentListings });
+      })
+    }
+
+    
     render(){
         return(
 
-            
-          
-            <div className="listing__container">
+            <div>
                 {this.state.currentListings.map((item) => (
                 <>
-                  <div className="listing__card">
-                    
-                      <img className="listing__image"
+                  <div>
+                      <img
                       src={item.image} 
                       alt="description"
                       width="100px" />
                     
-                    <div className="listing__description">
+                    <div>
                       <div key={item.id}>
                         <h1>{item.item_name}</h1>
                       </div>
                       <div>{item.item_description}</div>
                       <div>${item.price}</div>
                       <div>{item.item_neighbourhood}</div>
-                      
-                        <p>BUY THIS ITEM</p>
+                        <button onClick={(e) => this.buyItem(item.id, e)}>
+                          <p>BUY THIS ITEM</p>
+                        </button>
+                        
                      
                     </div>
                   </div>
@@ -46,12 +52,6 @@ class Listings extends React.Component {
                 </>
               ))}
             </div>
-          
-            
-            
-                    
-                
-            
         )
     }
 }

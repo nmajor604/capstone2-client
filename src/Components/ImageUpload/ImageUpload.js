@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import './ImageUpload';
+import { Link } from 'react-router-dom';
 const ImageUpload = () => {
 const [image, setImage ] = useState("");
 const [ url, setUrl ] = useState("");
@@ -22,9 +22,11 @@ const uploadImage = () => {
 return (
 <div>
 <div className='upload__container'>
+    <h4>Upload a clear image of your item here:</h4>
     <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
-
-    <button onClick={uploadImage}>Upload</button>
+    <Link to='/listings'>
+        <button onClick={uploadImage}>Upload Image</button>
+    </Link>
 </div>
 <div>
 <h4>Preview your image here</h4>

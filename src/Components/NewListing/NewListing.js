@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import React from 'react';
 import axios from 'axios';
-import ImageUpload from '../ImageUpload/ImageUpload';
+import { Link } from 'react-router-dom';
+
 
 function NewListing () {
 
@@ -86,14 +87,18 @@ function NewListing () {
                                     onChange={(e) => setItemNeighbourhood(e.target.value)}
                                 />
                             </div>
-                    <ImageUpload />        
+                    
+                    
                             
                     
                     
-                    
-                    <button className='ui button primary'>
-                        <p>Post Your Item</p>
-                    </button>
+                    <Link to='/imageupload'>
+                        <button >
+                            <p>Post Your Item</p>
+                        </button>
+                    </Link>
+                        
+            
                     
                     
                 </form>               
