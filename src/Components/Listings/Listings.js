@@ -15,7 +15,9 @@ class Listings extends React.Component {
     }
 
     buyItem(id, item) {
-      axios.patch(`http://localhost:5050/${id}`).then((res) => {
+      axios
+        .patch(`http://localhost:5050/${id}`)
+        .then((res) => {
         const currentListings = this.state.currentListings.filter(item.id !== id);
         this.setState({ currentListings });
       })
