@@ -16,11 +16,19 @@ class Listings extends React.Component {
 
     buyItem(id, item) {
       axios
-        .patch(`http://localhost:5050/${id}`)
+        .patch(`http://localhost:5050/${id}`, { "is_sold": "1"})
         .then((res) => {
-        const currentListings = this.state.currentListings.filter(item.id !== id);
-        this.setState({ currentListings });
-      })
+        // const currentListings = this.state.currentListings.filter(item.id !== id);
+        // this.setState({ currentListings });
+        console.log(this.state.currentListings)
+      });
+    }
+
+    deleteItem(id) {
+      axios.delete(`http://localhost:5050/${id}`)
+        .then((res) => {
+          console.log("Item Deleted")
+        })
     }
 
     
@@ -45,6 +53,9 @@ class Listings extends React.Component {
                       <div>{item.item_neighbourhood}</div>
                         <button onClick={(e) => this.buyItem(item.id, e)}>
                           <p>BUY THIS ITEM</p>
+                        </button>
+                        <button onClick={(e) => this.deleteItem(item.id, e)}>
+                          <p>DELETE THIS ITEM</p>
                         </button>
                         
                      
