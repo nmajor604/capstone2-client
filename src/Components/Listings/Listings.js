@@ -21,6 +21,7 @@ class Listings extends React.Component {
         // const currentListings = this.state.currentListings.filter(item.id !== id);
         // this.setState({ currentListings });
         console.log(this.state.currentListings)
+        console.log('Item Sold!');
       });
     }
 

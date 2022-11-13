@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 function NewListing () {
@@ -16,9 +16,10 @@ function NewListing () {
     
     
     const handleSubmit = (e) => {
+        console.log('Form submitted')
         e.preventDefault();
             axios
-            .post('http://localhost:5050', {
+            .post('http://localhost:5050/', {
                 price: price,
                 item_name: itemName,
                 item_title: itemTitle,
@@ -92,11 +93,11 @@ function NewListing () {
                             
                     
                     
-                    <Link to='/imageupload'>
-                        <button >
-                            <p>Post Your Item</p>
-                        </button>
-                    </Link>
+                    
+                        <input type='submit' >
+                            
+                        </input>
+                    
                         
             
                     
