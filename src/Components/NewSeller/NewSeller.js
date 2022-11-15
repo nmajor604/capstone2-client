@@ -35,7 +35,7 @@ class NewSeller extends React.Component {
         return(
             <>
                 <div>
-                    <form className="form__signup" onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit}>
                     <div><h4>Welcome! Sign Up Here!</h4></div>
                     <div>
                     <input
