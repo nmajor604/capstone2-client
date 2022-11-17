@@ -1,76 +1,33 @@
 import React from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
 
-
-class NewSeller extends React.Component {
-    state = {
-        selectedOption: ""
-    };
-
-    handleChange = (e) => {
-        this.setState({selectedOption: e.target.value})
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault();
-            axios
-            .post('http://localhost:5050/sellers', {
-                name: e.target.name.value,
-                location: e.target.location.value,
-                email: e.target.email.value,
-            })
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    
-        e.target.reset();
-        };
-    
-
-    render(){
+const NewSeller = () => {
         return(
-            <>
-                <div>
-                    <form onSubmit={this.handleSubmit}>
-                    <div><h4>Welcome! Sign Up Here!</h4></div>
-                    <div>
-                    <input
-                        placeholder='Choose a unique seller name'
-                        name='name'
-                    />
-                    </div>
-                    <div>
-                    <input
-                        placeholder='Enter your city'
-                        name='location'
-                    />
-                    </div>
-                    <div>
-                    <input
-                        placeholder='Enter your email address'
-                        name='email'
-                    />
-                    </div>
-                    
-                    <Link to="/add-item">
-                        <button>
-                            <p>Sign Up and Start Selling!</p>
-                        </button>
-                    </Link>
-                    
-                    <Link to="/">
-                        <p>Cancel</p>
-                    </Link>
-                </form>               
-                </div>
-                
-            </>
+          <div>
+              <div>
+                  <label for="firstName">First Name </label>
+                  <input type="text" id="firstName" placeholder="First Name"/>
+              </div>
+              <div>
+                  <label for="lastName">Last Name </label>
+                  <input type="text" name="" id="lastName" placeholder="Last Name"/>
+              </div>
+              <div>
+                  <label for="email">Email </label>
+                  <input type="email" id="email" placeholder="Email"/>
+              </div>
+              <div>
+                  <label for="password">Password </label>
+                  <input type="password" id="password" placeholder="Password"/>
+              </div>
+              <div>
+                  <label for="confirmPassword">Confirm Password </label>
+                  <input type="password" id="confirmPassword" placeholder="Confirm Password"/>
+              </div>
+              <div>
+              <button type="submit">Start Selling!</button>
+            </div>
+          </div>
         )
-    }
 }
 
 export default NewSeller;

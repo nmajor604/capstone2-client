@@ -1,65 +1,50 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: ""
-    };
-  }
-
-  handleChange = e => this.setState({ [e.target.name]: e.target.value, error: "" });
-
-  login = (e) => {
-    e.preventDefault();
-
-    const { username, password } = this.state;
-    if (!username || !password) {
-      return this.setState({ error: "Please fill all fields" });
-    }
-    this.props.login(username, password)
-      .then((loggedIn) => {
-        if (!loggedIn) {
-          this.setState({ error: "Invalid Credentails" });
-        }
-      })
-  };
-
-  render() {
-    return !this.props.user ? (
-      <>
-                <div>
-                    <form onSubmit={this.handleSubmit}>
-                    <div><h4>Welcome Back!</h4></div>
-                    <div>
-                    <input
-                        placeholder='Enter your seller name'
-                        name='name'
-                    />
-                    </div>
-                    <div>
-                    <input
-                        placeholder='Enter your email address'
-                        name='email'
-                    />
-                    </div>
-                    
-                    <button className='ui button primary'>
-                        <p>Login</p>
-                    </button>
-                    <Link to="/">
-                        <p>Cancel</p>
-                    </Link>
-                </form>               
-                </div>
-                
-            </>
-    ) : (
-      <Link to="/seller-home" />
-    );
-  }
+async function loginUser(credentials) {
+  return fetch('http://localhost:5050/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+  .then(data => data.json())
 }
 
-export default Login;
+export default function Login({ setToken }) {
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const token = await loginUser({
+      username,
+      password
+    });
+    setToken(token);
+  }
+
+  return(
+    <div>
+      <h1>Please Log In</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          <p>Username</p>
+          <input type="text" onChange={e => setUserName(e.target.value)}/>
+        </label>
+        <label>
+          <p>Password</p>
+          <input type="password" onChange={e => setPassword(e.target.value)}/>
+        </label>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  )
+}
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
+};
