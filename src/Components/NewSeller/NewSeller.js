@@ -11,7 +11,7 @@ const NewSeller = () => {
         console.log('User registered')
         e.preventDefault();
          axios
-         .post('http://localhost:5050/', {
+         .post('http://localhost:5050/seller-signup', {
             seller: seller,
             password: pwd
          })
