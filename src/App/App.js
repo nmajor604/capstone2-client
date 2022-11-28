@@ -9,6 +9,7 @@ import NewListing from '../Components/NewListing/NewListing';
 import NewSeller from '../Components/NewSeller/NewSeller';
 import SellerHome from '../Components/SellerHome/SellerHome';
 
+import RegLogin from '../Components/RegLogin/RegLogin';
 import useToken from './useToken';
 
 function App () {
@@ -24,12 +25,13 @@ function App () {
             {/* <Header /> */}
               <Routes>
                 <Route exact path='/' element={<Home />} />
-                <Route exact path='/seller-signup' element={<NewSeller />} />
+                <Route exact path='/signup' element={<NewSeller />} />
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path="/listings" element={<Listings />} />
                 <Route exact path="/add-item" element={<NewListing />} />
                 <Route exact path='/imageupload' element={<ImageUpload />} />
                 <Route exact path='/sellerhome' element={<SellerHome />} />
+                <Route exact path='/sellers' element={<RegLogin />} />
               </Routes>
             {/* <Footer /> */}
           </Router>
