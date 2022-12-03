@@ -1,0 +1,19 @@
+/* footer section*/
+  
+.footer_section {
+    background-color: #efeded;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .footer_section p {
+    color: #191818;
+    margin-left: 5%;
+    text-align: left;
+  }
+  
+  .footer_section a {
+    color: #191818;
+  }
+  
+  /* end footer section*/

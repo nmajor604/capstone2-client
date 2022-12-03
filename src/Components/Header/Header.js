@@ -4,18 +4,35 @@ import { Link } from 'react-router-dom';
 function Header() {
 
   return (
-    <header>
-      <div>
-        <Link to="/"><h1>Connex&trade;</h1></Link>
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            
+              Connex&trade;
+            
+          </a>
+            <div class="btn-container ml- ml-lg-4 d-flex justify-content-right">
+            <Link>
+            <a href='/login'>
+                Login
+              </a>
+            </Link>
+            <Link>
+            <a href='/signup'>
+                Sign Up
+              </a>
+            </Link>
+              
+            </div>
+        </nav>
       </div>
-      <div>
-        <div><Link to ="/seller-signup"><div>SIGN UP</div></Link></div>
-        <div><Link to ="/login"><div>LOGIN</div></Link></div>
-    </div>
-    </header>
-    
+      </header>
   )
   
 }
 
 export default Header;
+
+
+    

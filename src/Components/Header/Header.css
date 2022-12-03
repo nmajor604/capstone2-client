@@ -1,0 +1,54 @@
+/*header section*/
+.hero_area {
+    height: 95vh;
+    background-color: #FAF0E6
+  }
+  
+  .navbar-brand {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #000000;
+  }
+  
+  .custom_nav-container .nav_search-btn {
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position-y: 7px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+  }
+  
+  .custom_nav-container {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .custom_nav-container .navbar-toggler .navbar-toggler-icon {
+    /* background-image: url(../images/menu.png); */
+    background-size: 55px;
+  }
+  
+  .btn-container a {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-right: 0.5em;
+    border-radius: 5%;
+    background-color: #4169E1;
+    color: #f7f7f7;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .btn-container a:hover {
+    text-decoration: none;
+    color: #4169E1;
+    background-color: #f7f7f7;
+    border: 1px solid #4169E1;
+  }
+  
+  /*end header section*/

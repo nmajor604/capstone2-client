@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Footer.css';
 
 function Footer() {
 
   return (
-    <footer>
-      <div>
-        <p>&copy; 2022 Capstone Productions&trade;</p>
-      </div>
-      
-    </footer>
+    <section class="container-fluid footer_section">
+          <p>
+            Copyright &copy; 2019 All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+          </p>
+    </section>
     
   )
   
