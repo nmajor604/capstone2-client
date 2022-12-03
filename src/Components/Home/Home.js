@@ -1,9 +1,9 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import './Home.css';
 // import './Responsive.css';
 
 import hero from '../../assets/sydmead.jpg';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -22,19 +22,19 @@ function Home() {
                 Filling up your closet? <br />
                 Tired of playing endless email tag? 
                 <br />
-                Let's
+                Let's...
                 <br />
                 <span class="navbar-brand">
                     Connex!
                 </span>
               </p>
               <div class="btn__container">
-                <a href="/listings" class="shop-btn">
-                  Buy Something!
-                </a>
-                <a href="/add-item" class="sell-btn">
-                  Sell Something!
-                </a>
+                <Link to='/listings' class="shop-btn">
+                    Buy Something!
+                </Link>
+                <Link to='/add-item' class="sell-btn">
+                    Sell Something!
+                </Link>
               </div>
             </div>
           </div>
