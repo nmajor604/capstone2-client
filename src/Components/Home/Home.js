@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
-// import './Responsive.css';
 
+import Header from '../Header/Header';
 import hero from '../../assets/sydmead.jpg';
 import { Link } from 'react-router-dom';
 
@@ -9,10 +9,10 @@ function Home() {
 
   return (
     <>
+      <Header />
       <body>
         <div class="hero__container">
           <div class="slider_item-detail">
-            <div>
               <h1>
                 Buy and Sell. <br />
                 With Just One Click.
@@ -36,12 +36,10 @@ function Home() {
                     Sell Something!
                 </Link>
               </div>
-            </div>
+
           </div>
           <div class="slider_img-box">
-            <div>
               <img src={hero} alt="" class="" />
-            </div>
           </div>
         </div>
       </body>
