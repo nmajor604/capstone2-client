@@ -10,13 +10,13 @@ function Home() {
 
   return (
     <>
-      <section class=" slider_section position-relative">
-            <div class="slider_item-box">
-              <div class="slider_item-container">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="slider_item-detail">
+      <section className=" slider_section position-relative">
+            <div className="slider_item-box">
+              <div className="slider_item-container">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="slider_item-detail">
                         <div>
                           <h1>
                             Buy and Sell. <br />
@@ -28,21 +28,21 @@ function Home() {
                             Tired of playing email tag with buyers or sellers? <br />
                             Let's talk. Actually, let's Connex.
                           </p>
-                          <div class="d-flex">
-                            <a href="" class="text-uppercase custom_orange-btn mr-3">
+                          <div className="d-flex">
+                            <a href="" className="text-uppercase custom_orange-btn mr-3">
                               Buy Something!
                             </a>
-                            <a href="" class="text-uppercase custom_dark-btn">
+                            <a href="" className="text-uppercase custom_dark-btn">
                               Sell Something!
                             </a>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="slider_img-box">
+                    <div className="col-md-6">
+                      <div className="slider_img-box">
                         <div>
-                          <img src={hero} alt="" class="" />
+                          <img src={hero} alt="" className="" />
                         </div>
                       </div>
                     </div>

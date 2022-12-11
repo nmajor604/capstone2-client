@@ -34,15 +34,15 @@ export default function Login({ setToken }) {
   return(
     <>
     <Header />
-    <section class="contact_section layout_padding">
+    <section className="contact_section layout_padding">
       <div className='container'>
-        <h2 class="font-weight-bold">
+        <h2 className="font-weight-bold">
           Welcome Back! 
         </h2>
-        <div class="row">
-        <div class="col-md-8 mr-auto">
+        <div className="row">
+        <div className="col-md-8 mr-auto">
           <form onSubmit={handleSubmit}>
-            <div class="contact_form-container">
+            <div className="contact_form-container">
               <div>
                 <div>
                   <input type="text" placeholder="Username" onChange={e => setUserName(e.target.value)}/>
@@ -50,7 +50,7 @@ export default function Login({ setToken }) {
                 <div>
                   <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
                 </div>
-                <div class="mt-5">
+                <div className="mt-5">
                   <button type="submit">
                     LOGIN
                   </button>

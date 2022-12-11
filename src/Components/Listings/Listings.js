@@ -43,14 +43,14 @@ class Listings extends React.Component {
         return(
           <>
             <Header />
-            <section class="service_section layout_padding ">
-              <div class="container">
-                <h2 class="custom_heading">Listings</h2>
-                <p class="custom_heading-text">
+            <section className="service_section layout_padding ">
+              <div className="container">
+                <h2 className="custom_heading">Listings</h2>
+                <p className="custom_heading-text">
                   Once you find something you want, just click 'Buy Now' to send a purchase request directly to the seller. No need to exchange endless emails ever again! 
                 </p>
-                <div class=" layout_padding2">
-                <div class="card-deck">
+                <div className=" layout_padding2">
+                <div className="card-deck">
                     {this.state.currentListings.map((item) => (
                     <>
                       <div className="card">
@@ -61,15 +61,15 @@ class Listings extends React.Component {
                            />
                         <div className="card-body">
                           <div key={item.id}>
-                            <h5 class="card-title">{item.item_name}</h5>
+                            <h5 className="card-title">{item.item_name}</h5>
                           </div>
                           <p className="card-text">{item.item_description}</p>
                           <div className="card-text">${item.price}</div>
                           <div className="card-text">{item.item_neighbourhood}</div>
-                            <button onClick={(e) => this.buyItem(item.id, e)} class="custom_dark-btn">
+                            <button onClick={(e) => this.buyItem(item.id, e)} className="custom_dark-btn">
                               <p>BUY THIS ITEM</p>
                             </button>
-                            {/* <button onClick={(e) => this.deleteItem(item.id, e)} class="custom_orange-btn">
+                            {/* <button onClick={(e) => this.deleteItem(item.id, e)} className="custom_orange-btn">
                               <p>DELETE THIS ITEM</p>
                             </button> */}
                         </div>
@@ -82,8 +82,8 @@ class Listings extends React.Component {
               </div>
 
             </section>
-            <div class="d-flex justify-content-center">
-        <a href="" class="custom_dark-btn">
+            <div className="d-flex justify-content-center">
+        <a href="" className="custom_dark-btn">
           Show More
         </a>
       </div>

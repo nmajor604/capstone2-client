@@ -50,7 +50,7 @@ function NewListing () {
         return(
             <>
             <Header />
-            <section class="contact_section layout_padding">
+            <section className="contact_section layout_padding">
                 <div className='container'>
                     <h2 className="font-weight-bold">
                         Start Selling!
@@ -58,10 +58,10 @@ function NewListing () {
                     <h2 className="font-weight-bold">
                         All fields are required.
                     </h2>
-                    <div class="row">
-                        <div class="col-md-8 mr-auto">
+                    <div clasName="row">
+                        <div className="col-md-8 mr-auto">
                             <form onSubmit={handleSubmit}>
-                                <div class="contact_form-container">
+                                <div className="contact_form-container">
                                         <div>
                                             <input
                                                 placeholder='Name Whatever Price You Think Is Fair'
