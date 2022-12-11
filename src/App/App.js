@@ -1,6 +1,9 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 
+
+import Header from '../Components/Header/Header';
+import Footer from '../Components/Footer/Footer';
 import ImageUpload from '../Components/ImageUpload/ImageUpload';
 import Home from '../Components/Home/Home';
 import Listings from '../Components/Listings/Listings';
@@ -22,7 +25,7 @@ function App () {
 
     return (
           <Router>
-            {/* <Header /> */}
+            <Header />
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/signup' element={<NewSeller />} />
@@ -34,7 +37,7 @@ function App () {
                 {/* <Route exact path='/sellers' element={<RegLogin />} /> */}
                 
               </Routes>
-            {/* <Footer /> */}
+            <Footer />
           </Router>
       );
     

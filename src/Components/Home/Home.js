@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Header from '../Header/Header';
 import hero from '../../images/garage_sale.jpg';
 // import { Link } from 'react-router-dom';
 import '../../css/style.css';
@@ -11,7 +10,6 @@ function Home() {
 
   return (
     <>
-      <Header />
       <section class=" slider_section position-relative">
             <div class="slider_item-box">
               <div class="slider_item-container">
