@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useRef, useState, useEffect } from 'react';
 
+import Header from '../Header/Header';
+
 const NewSeller = () => {
 
     const [seller, setSeller] = useState('');
@@ -26,41 +28,42 @@ const NewSeller = () => {
     }
 
         return(
-          <form onSubmit={handleSubmit}>
-              <div>
-                  <label for="username">Username</label>
-                  <input 
-                    type="text" 
-                    id="username" 
-                    placeholder="Username"
-                    onChange={(e) => setSeller(e.target.value)}
-                    value={seller}
-                />
+          <>
+            <Header />
+            <section class="contact_section layout_padding">
+              <div className='container'>
+                <h2 class="font-weight-bold">
+                  Welcome Back! 
+                </h2>
+                <div class="row">
+                <div class="col-md-8 mr-auto">
+                  <form onSubmit={handleSubmit}>
+                    <div class="contact_form-container">
+                      <div>
+                        <div>
+                          <input type="text" placeholder="Username" onChange={e => setSeller(e.target.value)}/>
+                        </div>
+                        <div>
+                          <input type="password" placeholder="Password" onChange={e => setPwd(e.target.value)}/>
+                        </div>
+                        <div>
+                          <input type="password" placeholder="Confirm Password" onChange={e => setConfPwd(e.target.value)}/>
+                        </div>
+                        <div class="mt-5">
+                          <button type="submit">
+                            START SELLING!
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </form>
+                </div>
               </div>
-              <div>
-                  <label for="password">Password </label>
-                  <input 
-                    type="password" 
-                    id="password" 
-                    placeholder="Password"
-                    onChange={(e) => setPwd(e.target.value)}
-                    value={pwd}
-                />
               </div>
-              <div>
-                  <label for="confirmPassword">Confirm Password </label>
-                  <input 
-                    type="password" 
-                    id="confirmPassword" 
-                    placeholder="Confirm Password"
-                    onChange={(e) => setConfPwd(e.target.value)}
-                    value={confPwd}
-                />
-              </div>
-              <div>
-              <button type="submit">Start Selling!</button>
-            </div>
-          </form>
+            </section>
+          </>
         )
 }
 

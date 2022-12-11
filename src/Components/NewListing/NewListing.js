@@ -3,6 +3,12 @@ import React from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 
+import Header from '../Header/Header';
+
+import '../../css/style.css';
+import '../../css/responsive.css';
+import '../../css/bootstrap.css';
+
 
 function NewListing () {
 
@@ -42,69 +48,73 @@ function NewListing () {
     
     
         return(
-            <div className='signup__container'>
-                    <form className="form__signup" onSubmit={handleSubmit}>
-                    <div><h4>Start Selling!</h4></div>
-                    <div><p>All fields are required, as well as at least one photo.</p></div>
-                    <div>
-                            <div>
-                                <input
-                                    placeholder='Name Whatever Price You Think Is Fair'
-                                    name='price'
-                                    value={price}
-                                    onChange={(e) => setPrice(e.target.value)}
-                                />
-                            </div>
-                            <input
-                                placeholder='What Are You Selling?'
-                                name='item_name'
-                                value={itemName}
-                                onChange={(e) => setItemName(e.target.value)}
-
-                            />
-                            </div>
-                            <div>
-                                <input
-                                    placeholder='Write A Brief Headline'
-                                    name='item_title'
-                                    value={itemTitle}
-                                    onChange={(e) => setItemTitle(e.target.value)}
-                                />
-                            </div>
-                            
-                            <div>
-                                <input
-                                    placeholder='Describe Your Item, Including the Condition'
-                                    name='item_description'
-                                    value={itemDescription}
-                                    onChange={(e) => setItemDescription(e.target.value)}
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    placeholder='List the Neighbourhood Your Selling In'
-                                    name='item_neighbourhood'
-                                    value={itemNeighbourhood}
-                                    onChange={(e) => setItemNeighbourhood(e.target.value)}
-                                />
-                            </div>
+            <>
+            <Header />
+            <section class="contact_section layout_padding">
+                <div className='container'>
+                    <h2 className="font-weight-bold">
+                        Start Selling!
+                    </h2>
+                    <h2 className="font-weight-bold">
+                        All fields are required.
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-8 mr-auto">
+                            <form onSubmit={handleSubmit}>
+                                <div class="contact_form-container">
+                                        <div>
+                                            <input
+                                                placeholder='Name Whatever Price You Think Is Fair'
+                                                name='price'
+                                                value={price}
+                                                onChange={(e) => setPrice(e.target.value)}
+                                            />
+                                        </div>
+                                        <div>
+                                            <input
+                                                placeholder='What Are You Selling?'
+                                                name='item_name'
+                                                value={itemName}
+                                                onChange={(e) => setItemName(e.target.value)}
+                                            />
+                                        </div>
+                                    <div>
+                                        <input
+                                            placeholder='Write A Brief Headline'
+                                            name='item_title'
+                                            value={itemTitle}
+                                            onChange={(e) => setItemTitle(e.target.value)}
+                                        />
+                                    </div>
+                                    <div>
+                                        <input
+                                            placeholder='Describe Your Item, Including the Condition'
+                                            name='item_description'
+                                            value={itemDescription}
+                                            onChange={(e) => setItemDescription(e.target.value)}
+                                        />
+                                    </div>
+                                    <div>
+                                        <input
+                                            placeholder='List the Neighbourhood Your Selling In'
+                                            name='item_neighbourhood'
+                                            value={itemNeighbourhood}
+                                            onChange={(e) => setItemNeighbourhood(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className="mt-5">
+                                        <button type="submit">
+                                            POST ITEM
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     
-                    
-                            
-                    
-                    
-                    
-                        <input type='submit' >
-                            
-                        </input>
-                    
-                        
-            
-                    
-                    
-                </form>               
-                </div> 
-            
+                </div>               
+            </section> 
+            </>
         )
     
 }

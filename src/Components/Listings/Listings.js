@@ -1,6 +1,12 @@
 import React from "react";
 import axios from "axios";
 
+import Header from '../Header/Header';
+
+import '../../css/style.css';
+import '../../css/responsive.css';
+import '../../css/bootstrap.css';
+
 class Listings extends React.Component {
     state = {
         currentListings: [],
@@ -35,37 +41,53 @@ class Listings extends React.Component {
     
     render(){
         return(
-
-            <div>
-                {this.state.currentListings.map((item) => (
-                <>
-                  <div>
-                      <img
-                      src={item.image} 
-                      alt="description"
-                      width="100px" />
-                    
-                    <div>
-                      <div key={item.id}>
-                        <h1>{item.item_name}</h1>
+          <>
+            <Header />
+            <section class="service_section layout_padding ">
+              <div class="container">
+                <h2 class="custom_heading">Listings</h2>
+                <p class="custom_heading-text">
+                  Once you find something you want, just click 'Buy Now' to send a purchase request directly to the seller. No need to exchange endless emails ever again! 
+                </p>
+                <div class=" layout_padding2">
+                <div class="card-deck">
+                    {this.state.currentListings.map((item) => (
+                    <>
+                      <div className="card">
+                          <img
+                          className="card-img-top"
+                          src={item.image} 
+                          alt="description"
+                           />
+                        <div className="card-body">
+                          <div key={item.id}>
+                            <h5 class="card-title">{item.item_name}</h5>
+                          </div>
+                          <p className="card-text">{item.item_description}</p>
+                          <div className="card-text">${item.price}</div>
+                          <div className="card-text">{item.item_neighbourhood}</div>
+                            <button onClick={(e) => this.buyItem(item.id, e)} class="custom_dark-btn">
+                              <p>BUY THIS ITEM</p>
+                            </button>
+                            {/* <button onClick={(e) => this.deleteItem(item.id, e)} class="custom_orange-btn">
+                              <p>DELETE THIS ITEM</p>
+                            </button> */}
+                        </div>
                       </div>
-                      <div>{item.item_description}</div>
-                      <div>${item.price}</div>
-                      <div>{item.item_neighbourhood}</div>
-                        <button onClick={(e) => this.buyItem(item.id, e)}>
-                          <p>BUY THIS ITEM</p>
-                        </button>
-                        <button onClick={(e) => this.deleteItem(item.id, e)}>
-                          <p>DELETE THIS ITEM</p>
-                        </button>
-                        
-                     
-                    </div>
-                  </div>
+                    </>
+                  ))}
                   
-                </>
-              ))}
-            </div>
+                  </div>
+              </div>
+              </div>
+
+            </section>
+            <div class="d-flex justify-content-center">
+        <a href="" class="custom_dark-btn">
+          Show More
+        </a>
+      </div>
+          </>
         )
     }
 }

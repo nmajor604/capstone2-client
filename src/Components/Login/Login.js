@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import Header from '../Header/Header';
+
+import '../../css/style.css';
+import '../../css/responsive.css';
+import '../../css/bootstrap.css';
+
 async function loginUser(credentials) {
   return fetch('http://localhost:5050/login', {
     method: 'POST',
@@ -26,22 +32,37 @@ export default function Login({ setToken }) {
   }
 
   return(
-    <div>
-      <h1>Please Log In</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setUserName(e.target.value)}/>
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)}/>
-        </label>
-        <div>
-          <button type="submit">Submit</button>
+    <>
+    <Header />
+    <section class="contact_section layout_padding">
+      <div className='container'>
+        <h2 class="font-weight-bold">
+          Welcome Back! 
+        </h2>
+        <div class="row">
+        <div class="col-md-8 mr-auto">
+          <form onSubmit={handleSubmit}>
+            <div class="contact_form-container">
+              <div>
+                <div>
+                  <input type="text" placeholder="Username" onChange={e => setUserName(e.target.value)}/>
+                </div>
+                <div>
+                  <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
+                </div>
+                <div class="mt-5">
+                  <button type="submit">
+                    LOGIN
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
+      </div>
+    </section>
+    </>
   )
 }
 
