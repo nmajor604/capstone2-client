@@ -3,8 +3,6 @@ import React from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 
-import Header from '../Header/Header';
-
 import '../../css/style.css';
 import '../../css/responsive.css';
 import '../../css/bootstrap.css';
@@ -25,11 +23,13 @@ function NewListing () {
         console.log('Form submitted')
         e.preventDefault();
             axios
-            .post('http://localhost:5050/', {
+            .post('http://localhost:5050', {
                 price: price,
+                image: "https://res.cloudinary.com/dnceb1qqy/image/upload/v1661591256/a6brsf0g8guc3ouwti7x.jpg",
                 item_name: itemName,
                 item_title: itemTitle,
                 item_description: itemDescription,
+                seller_id: "1",
                 is_firm: "0",
                 item_neighbourhood: itemNeighbourhood,
                 is_sold: "0"
@@ -49,7 +49,6 @@ function NewListing () {
     
         return(
             <>
-            <Header />
             <section className="contact_section layout_padding">
                 <div className='container'>
                     <h2 className="font-weight-bold">

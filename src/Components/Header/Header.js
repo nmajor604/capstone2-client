@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../images/logo.png';
+import favicon from '../../images/favicon-32x32.png';
 
 import '../../css/style.css';
 import '../../css/responsive.css';
@@ -14,7 +15,7 @@ function Header() {
       <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container pt-3">
           <a className="navbar-brand" href="index.html">
-            <img src={logo} alt="" /><span>
+            <img src={favicon} alt="" /><span>
               Connex
             </span>
           </a>

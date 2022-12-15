@@ -1,8 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-import Header from '../Header/Header';
-
 import '../../css/style.css';
 import '../../css/responsive.css';
 import '../../css/bootstrap.css';
@@ -42,7 +40,7 @@ class Listings extends React.Component {
     render(){
         return(
           <>
-            <Header />
+            
             <section className="service_section layout_padding ">
               <div className="container">
                 <h2 className="custom_heading">Listings</h2>
@@ -58,6 +56,7 @@ class Listings extends React.Component {
                           className="card-img-top"
                           src={item.image} 
                           alt="description"
+                          
                            />
                         <div className="card-body">
                           <div key={item.id}>

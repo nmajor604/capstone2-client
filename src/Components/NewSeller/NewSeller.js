@@ -1,8 +1,6 @@
 import axios from 'axios';
 import { useRef, useState, useEffect } from 'react';
 
-import Header from '../Header/Header';
-
 const NewSeller = () => {
 
     const [seller, setSeller] = useState('');
@@ -29,11 +27,10 @@ const NewSeller = () => {
 
         return(
           <>
-            <Header />
             <section className="contact_section layout_padding">
               <div className='container'>
                 <h2 className="font-weight-bold">
-                  Welcome Back! 
+                  Welcome To Connex! 
                 </h2>
                 <div className="row">
                 <div className="col-md-8 mr-auto">
@@ -41,10 +38,10 @@ const NewSeller = () => {
                     <div className="contact_form-container">
                       <div>
                         <div>
-                          <input type="text" placeholder="Username" onChange={e => setSeller(e.target.value)}/>
+                          <input type="text" placeholder="Choose a Unique Username" onChange={e => setSeller(e.target.value)}/>
                         </div>
                         <div>
-                          <input type="password" placeholder="Password" onChange={e => setPwd(e.target.value)}/>
+                          <input type="password" placeholder="Choose a Unique Password" onChange={e => setPwd(e.target.value)}/>
                         </div>
                         <div>
                           <input type="password" placeholder="Confirm Password" onChange={e => setConfPwd(e.target.value)}/>
