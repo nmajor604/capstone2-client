@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Header from '../Header/Header';
-
 import '../../css/style.css';
 import '../../css/responsive.css';
 import '../../css/bootstrap.css';
@@ -33,7 +31,6 @@ export default function Login({ setToken }) {
 
   return(
     <>
-    <Header />
     <section className="contact_section layout_padding">
       <div className='container'>
         <h2 className="font-weight-bold">

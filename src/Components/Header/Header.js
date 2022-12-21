@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../../images/logo.png';
 import favicon from '../../images/favicon-32x32.png';
 
 import '../../css/style.css';
@@ -14,7 +13,7 @@ function Header() {
     <header className="header_section">
       <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" href="/">
             <img src={favicon} alt="" /><span>
               Connex
             </span>
@@ -28,7 +27,7 @@ function Header() {
             <div className="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul className="navbar-nav  ">
                 <li className="nav-item active">
-                  <a className="nav-link" href="index.html">Home <span className="sr-only">(current)</span></a>
+                  <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="contact.html">Contact us</a>
@@ -38,16 +37,16 @@ function Header() {
                 <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
               </form>
             </div>
-            <div className="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-              <a href="">
+            <Link to='/login' className="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+              <a href="/login">
                 Login
               </a>
-            </div>
-            <div className="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-              <a href="">
+            </Link>
+            <Link to='/signup' className="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+              <a href="/signup">
                 Sign Up
               </a>
-            </div>
+            </Link>
           </div>
         </nav>
       </div>

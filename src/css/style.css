@@ -39,6 +39,7 @@ body {
   outline: none;
   color: #f7f7f7;
   border: 1px solid transparent;
+  border-radius: 2.5%;
 }
 
 .custom_dark-btn {
@@ -52,12 +53,13 @@ body {
 }
 
 .custom_orange-btn {
-  background-color: #fc5d35;
+  background-color: #4169E1;
 }
 
 .custom_orange-btn:hover {
-  border: 1px solid #fc5d35;
-  color: #fc5d35;
+  border: 1px solid #4169E1;
+  color: #4169E1;
+  text-decoration: none;
   background-color: transparent;
 }
 
@@ -170,7 +172,7 @@ a:focus {
 .quote_btn-container a {
   display: inline-block;
   padding: 5px 15px;
-  background-color: #fc5d35;
+  background-color: #4169E1;
   color: #f7f7f7;
   font-size: 14px;
   text-transform: uppercase;
@@ -274,7 +276,7 @@ a:focus {
 }
 
 .service_section .card .card-title {
-  color: #fc5d35;
+  color: #4169E1;
 
 }
 
@@ -297,7 +299,7 @@ a:focus {
 }
 
 .service_section .card:hover::after {
-  background-color: #fc5d35;
+  background-color: #4169E1;
 }
 
 /* end service section */
@@ -385,7 +387,7 @@ a:focus {
 
 .contact_form-container button {
   border: none;
-  background-color: #fc5d35;
+  background-color: #4169E1;
   color: #fff;
   padding: 8px 40px;
   text-transform: uppercase;
@@ -434,7 +436,7 @@ a:focus {
 }
 
 .info_section .form_container button {
-  background-color: #fc5d35;
+  background-color: #4169E1;
   border: none;
   outline: none;
   color: #fff;

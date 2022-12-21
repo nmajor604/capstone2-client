@@ -1,7 +1,7 @@
 import React from 'react';
 
 import hero from '../../images/garage_sale.jpg';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../css/style.css';
 import '../../css/responsive.css';
 import '../../css/bootstrap.css';
@@ -29,12 +29,17 @@ function Home() {
                             Let's talk. Actually, let's Connex.
                           </p>
                           <div className="d-flex">
-                            <a href="" className="text-uppercase custom_orange-btn mr-3">
-                              Buy Something!
-                            </a>
-                            <a href="" className="text-uppercase custom_dark-btn">
-                              Sell Something!
-                            </a>
+                            <Link to="/listings">
+                              <button className="text-uppercase custom_orange-btn mr-3">
+                                Buy Something!
+                              </button>
+                            </Link>
+                            <Link to="/add-item">
+                              <button className="text-uppercase custom_dark-btn">
+                                Sell Something!
+                              </button>
+                            </Link>
+                            
                           </div>
                         </div>
                       </div>

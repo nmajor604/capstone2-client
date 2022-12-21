@@ -40,7 +40,6 @@ class Listings extends React.Component {
     render(){
         return(
           <>
-            
             <section className="service_section layout_padding ">
               <div className="container">
                 <h2 className="custom_heading">Listings</h2>
@@ -82,7 +81,7 @@ class Listings extends React.Component {
 
             </section>
             <div className="d-flex justify-content-center">
-        <a href="" className="custom_dark-btn">
+        <a href="/listings" className="custom_dark-btn">
           Show More
         </a>
       </div>
