@@ -17,13 +17,13 @@ async function loginUser(credentials) {
 }
 
 export default function Login({ setToken }) {
-  const [username, setUserName] = useState();
+  const [seller, setSeller] = useState();
   const [password, setPassword] = useState();
 
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
-      username,
+      seller,
       password
     });
     setToken(token);
@@ -42,7 +42,7 @@ export default function Login({ setToken }) {
             <div className="contact_form-container">
               <div>
                 <div>
-                  <input type="text" placeholder="Username" onChange={e => setUserName(e.target.value)}/>
+                  <input type="text" placeholder="Username" onChange={e => setSeller(e.target.value)}/>
                 </div>
                 <div>
                   <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>

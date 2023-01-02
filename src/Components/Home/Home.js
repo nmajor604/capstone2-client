@@ -2,6 +2,7 @@ import React from 'react';
 
 import hero from '../../images/garage_sale.jpg';
 import { Link } from 'react-router-dom';
+
 import '../../css/style.css';
 import '../../css/responsive.css';
 import '../../css/bootstrap.css';
@@ -39,7 +40,6 @@ function Home() {
                                 Sell Something!
                               </button>
                             </Link>
-                            
                           </div>
                         </div>
                       </div>
@@ -47,7 +47,7 @@ function Home() {
                     <div className="col-md-6">
                       <div className="slider_img-box">
                         <div>
-                          <img src={hero} alt="" className="" />
+                          <img src={hero} alt="Hero" className="" />
                         </div>
                       </div>
                     </div>

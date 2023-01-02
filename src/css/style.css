@@ -169,13 +169,21 @@ a:focus {
   background-size: 55px;
 }
 
-.quote_btn-container a {
+.quote_btn-container  {
   display: inline-block;
   padding: 5px 15px;
   background-color: #4169E1;
   color: #f7f7f7;
   font-size: 14px;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.quote_btn-container:hover {
+  color: #4169E1;
+  border: #4169E1 1px solid;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 /*end header section*/
@@ -397,13 +405,7 @@ a:focus {
 
 /* contact section */
 
-/* map section */
-.map_section {
-  height: 500px;
-}
 
-
-/* end map section */
 
 /* info section */
 .info_section ul {

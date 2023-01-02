@@ -38,14 +38,14 @@ function Header() {
               </form>
             </div>
             <Link to='/login' className="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-              <a href="/login">
+              {/* <a href="/login"> */}
                 Login
-              </a>
+              {/* </a> */}
             </Link>
             <Link to='/signup' className="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-              <a href="/signup">
+              {/* <a href="/signup"> */}
                 Sign Up
-              </a>
+              {/* </a> */}
             </Link>
           </div>
         </nav>
