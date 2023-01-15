@@ -11,7 +11,7 @@ class Listings extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('http://localhost:5050/').then((res) => {
+        axios.get('http://localhost:5050/listings').then((res) => {
             this.setState({ currentListings: res.data });
             console.log(this.state.currentListings)
         });
@@ -22,8 +22,8 @@ class Listings extends React.Component {
       axios
         .patch(`http://localhost:5050/${id}`, { "is_sold": "1"})
         .then((res) => {
-        // const currentListings = this.state.currentListings.filter(item.id !== id);
-        // this.setState({ currentListings });
+        const currentListings = this.state.currentListings.filter(item.id !== id);
+        this.setState({ currentListings });
         console.log(this.state.currentListings)
         console.log('Item Sold!');
       });
