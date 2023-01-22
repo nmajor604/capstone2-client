@@ -11,6 +11,7 @@ import Login from '../Components/Login/Login';
 import NewListing from '../Components/NewListing/NewListing';
 import NewSeller from '../Components/NewSeller/NewSeller';
 import SellerHome from '../Components/SellerHome/SellerHome';
+import Contact from '../Components/Contact';
 
 // import RegLogin from '../Components/RegLogin/RegLogin';
 import useToken from './useToken';
@@ -34,6 +35,7 @@ function App () {
                 <Route exact path="/add-item" element={<NewListing />} />
                 <Route exact path='/imageupload' element={<ImageUpload />} />
                 <Route exact path='/sellerhome' element={<SellerHome />} />
+                <Route exact path='/contact' element={<Contact />} />
                 {/* <Route exact path='/sellers' element={<RegLogin />} /> */}
                 
               </Routes>
