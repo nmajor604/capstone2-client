@@ -38,13 +38,27 @@ const NewSeller = () => {
                     <div className="contact_form-container">
                       <div>
                         <div>
-                          <input type="text" placeholder="Choose a Unique Username" onChange={e => setSeller(e.target.value)}/>
+                          <input 
+                            type="text" 
+                            placeholder="Choose a Unique Username" 
+                            value={seller}
+                            onChange={e => setSeller(e.target.value)}
+                          />
                         </div>
                         <div>
-                          <input type="password" placeholder="Choose a Unique Password" onChange={e => setPwd(e.target.value)}/>
+                          <input 
+                            type="password" 
+                            placeholder="Choose a Unique Password" 
+                            value={pwd}
+                            onChange={e => setPwd(e.target.value)}
+                          />
                         </div>
                         <div>
-                          <input type="password" placeholder="Confirm Password" onChange={e => setConfPwd(e.target.value)}/>
+                          <input 
+                            type="password" 
+                            placeholder="Confirm Password" 
+                            onChange={e => setConfPwd(e.target.value)}
+                          />
                         </div>
                         <div className="mt-5">
                           <button type="submit">
