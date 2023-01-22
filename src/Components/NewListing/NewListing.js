@@ -23,7 +23,7 @@ function NewListing () {
         console.log('Form submitted')
         e.preventDefault();
             axios
-            .post('http://localhost:5050', {
+            .post('http://localhost:5050/listings', {
                 price: price,
                 image: "https://res.cloudinary.com/dnceb1qqy/image/upload/v1661591256/a6brsf0g8guc3ouwti7x.jpg",
                 item_name: itemName,
@@ -32,7 +32,7 @@ function NewListing () {
                 seller_id: "1",
                 is_firm: "0",
                 item_neighbourhood: itemNeighbourhood,
-                is_sold: "0"
+                is_sold: "1"
             })
             .then((res) => {
                 console.log(res);

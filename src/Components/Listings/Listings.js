@@ -30,7 +30,7 @@ class Listings extends React.Component {
     }
 
     deleteItem(id) {
-      axios.delete(`http://localhost:5050/${id}`)
+      axios.delete(`http://localhost:5050/listings/${id}`)
         .then((res) => {
           console.log("Item Deleted")
         })
@@ -67,9 +67,9 @@ class Listings extends React.Component {
                             <button onClick={(e) => this.buyItem(item.id, e)} className="custom_dark-btn">
                               <p>BUY THIS ITEM</p>
                             </button>
-                            {/* <button onClick={(e) => this.deleteItem(item.id, e)} className="custom_orange-btn">
+                            <button onClick={(e) => this.deleteItem(item.id, e)} className="custom_orange-btn">
                               <p>DELETE THIS ITEM</p>
-                            </button> */}
+                            </button>
                         </div>
                       </div>
                     </>
