@@ -16,8 +16,24 @@ function NewListing () {
     const [itemDescription, setItemDescription] = useState("");
     const [itemNeighbourhood, setItemNeighbourhood] = useState("");
 
+    const [image, setImage ] = useState("");
+    const [ url, setUrl ] = useState("");
 
-    
+    const uploadImage = () => {
+        const data = new FormData()
+        data.append("file", image)
+        data.append("upload_preset", "singapore")
+        data.append("cloud_name","dnceb1qqy")
+        fetch("  https://api.cloudinary.com/v1_1/dnceb1qqy/image/upload",{
+        method:"post",
+        body: data
+        })
+        .then(resp => resp.json())
+        .then(data => {
+        setUrl(data.url)
+        })
+        .catch(err => console.log(err))
+        }
     
     const handleSubmit = (e) => {
         console.log('Form submitted')
@@ -25,7 +41,7 @@ function NewListing () {
             axios
             .post('http://localhost:5050/listings', {
                 price: price,
-                image: "https://res.cloudinary.com/dnceb1qqy/image/upload/v1661591256/a6brsf0g8guc3ouwti7x.jpg",
+                image: url,
                 item_name: itemName,
                 item_title: itemTitle,
                 item_description: itemDescription,
@@ -100,6 +116,16 @@ function NewListing () {
                                             value={itemNeighbourhood}
                                             onChange={(e) => setItemNeighbourhood(e.target.value)}
                                         />
+                                    </div>
+                                    <div>
+                                        <div>
+                                        <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
+                                        <button onClick={uploadImage}>Upload</button>
+                                        </div>
+                                        <div>
+                                        <h1>Uploaded image will be displayed here</h1>
+                                        <img src={url} alt="description"/>
+                                        </div>
                                     </div>
                                     <div className="mt-5">
                                         <button type="submit">
