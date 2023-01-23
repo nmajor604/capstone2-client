@@ -19,7 +19,9 @@ function NewListing () {
     const [image, setImage ] = useState("");
     const [ url, setUrl ] = useState("");
 
-    const uploadImage = () => {
+    const uploadImage = (e) => {
+        e.preventDefault();
+
         const data = new FormData()
         data.append("file", image)
         data.append("upload_preset", "singapore")
