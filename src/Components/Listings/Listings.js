@@ -46,7 +46,7 @@ class Listings extends React.Component {
                 <p className="custom_heading-text">
                   Once you find something you want, just click 'Buy Now' to send a purchase request directly to the seller. No need to exchange endless emails ever again! 
                 </p>
-                <div className=" layout_padding2">
+                <div className="layout_padding2">
                 <div className="card-deck">
                     {this.state.currentListings.map((item) => (
                     <>

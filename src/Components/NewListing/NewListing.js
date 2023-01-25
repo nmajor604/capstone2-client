@@ -79,22 +79,22 @@ function NewListing () {
                         <div className="col-md-8 mr-auto">
                             <form onSubmit={handleSubmit}>
                                 <div className="contact_form-container">
-                                        <div>
-                                            <input
-                                                placeholder='Name Whatever Price You Think Is Fair'
-                                                name='price'
-                                                value={price}
-                                                onChange={(e) => setPrice(e.target.value)}
-                                            />
-                                        </div>
-                                        <div>
-                                            <input
-                                                placeholder='What Are You Selling?'
-                                                name='item_name'
-                                                value={itemName}
-                                                onChange={(e) => setItemName(e.target.value)}
-                                            />
-                                        </div>
+                                    <div>
+                                        <input
+                                            placeholder='Name Whatever Price You Think Is Fair'
+                                            name='price'
+                                            value={price}
+                                            onChange={(e) => setPrice(e.target.value)}
+                                        />
+                                    </div>
+                                    <div>
+                                        <input
+                                            placeholder='What Are You Selling?'
+                                            name='item_name'
+                                            value={itemName}
+                                            onChange={(e) => setItemName(e.target.value)}
+                                        />
+                                    </div>
                                     <div>
                                         <input
                                             placeholder='Write A Brief Headline'
@@ -120,14 +120,10 @@ function NewListing () {
                                         />
                                     </div>
                                     <div>
-                                        <div>
                                         <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
                                         <button onClick={uploadImage}>Upload</button>
-                                        </div>
-                                        <div>
-                                        <h1>Uploaded image will be displayed here</h1>
+                                        <h2 className="font-weight-bold">Uploaded image will be displayed here</h2>
                                         <img src={url} alt="description"/>
-                                        </div>
                                     </div>
                                     <div className="mt-5">
                                         <button type="submit">
