@@ -59,46 +59,39 @@ function Home() {
 
     <section class="service_section layout_padding ">
     <div class="container">
-      <h2 class="custom_heading">Our Services</h2>
+      <h2 class="custom_heading">The Connex Difference</h2>
       <p class="custom_heading-text">
-        There are many variations of passages of Lorem Ipsum available, but
-        the majority have
+        We're not your ordinary online classified site - we're the best of both worlds. 
+        The annonymity of a free service like Craiglist coupled with the one-click ordering of 
+        Amazon or Facebook.
       </p>
       <div class=" layout_padding2">
         <div class="card-deck">
           <div class="card">
             <img class="card-img-top" src="images/card-item-1.png" alt="Card cap" />
             <div class="card-body">
-              <h5 class="card-title">Orange</h5>
+              <h5 class="card-title">Privacy</h5>
               <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
+                We never collect or sell your data. Ever.
               </p>
             </div>
           </div>
           <div class="card">
             <img class="card-img-top" src="images/card-item-2.png" alt="Card cap" />
             <div class="card-body">
-              <h5 class="card-title">Grapes</h5>
+              <h5 class="card-title">Simplicity</h5>
               <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
+                When you find an item you want to purchase, simply click on the button. No more endless
+                email tag with the seller.
               </p>
             </div>
           </div>
           <div class="card">
             <img class="card-img-top" src="images/card-item-3.png" alt="Card cap" />
             <div class="card-body">
-              <h5 class="card-title">Gauva</h5>
+              <h5 class="card-title">Free</h5>
               <p class="card-text">
-                There are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered alteration in some
-                form, by injected humour, or randomised words which don't look
-                even slightly believable.
+                We're 100% ad based. Pay your seller, never us.
               </p>
             </div>
           </div>
@@ -106,7 +99,7 @@ function Home() {
         </div>
       </div>
       <p class="custom_heading-text">
-        Sounds Interesting? What Are You Waiting For?
+        Piqued your interest? Sign up today and join 1000s of others!
       </p>
       <div class="d-flex justify-content-center">
       <Link to="/contact">
