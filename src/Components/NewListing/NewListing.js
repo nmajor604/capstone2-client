@@ -16,6 +16,8 @@ function NewListing () {
     const [itemDescription, setItemDescription] = useState("");
     const [itemNeighbourhood, setItemNeighbourhood] = useState("");
 
+    const [isFirm, setIsFirm] = useState("");
+
     const [image, setImage ] = useState("");
     const [ url, setUrl ] = useState("");
 
@@ -48,7 +50,7 @@ function NewListing () {
                 item_title: itemTitle,
                 item_description: itemDescription,
                 seller_id: "1",
-                is_firm: "0",
+                is_firm: isFirm,
                 item_neighbourhood: itemNeighbourhood,
                 is_sold: "0"
             })
@@ -125,6 +127,8 @@ function NewListing () {
                                             name='isFirm'
                                             id='flexible'
                                             value="0"
+                                            checked={isFirm === "0"}
+                                            onChange={(e) => setIsFirm(e.target.value)}
                                         />
                                         <label for="flexible">Price Flexible</label>
                                     
@@ -133,6 +137,8 @@ function NewListing () {
                                             name='isFirm'
                                             id='firm'
                                             value="1"
+                                            checked={isFirm === "1"}
+                                            onChange={(e) => setIsFirm(e.target.value)}
                                         />
                                         <label for="firm">Price Firm</label>
                                     </div>
