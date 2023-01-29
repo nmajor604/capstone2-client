@@ -25,18 +25,18 @@ function NewListing () {
         const data = new FormData()
         data.append("file", image)
         data.append("upload_preset", "singapore")
-        data.append("cloud_name","dnceb1qqy")
-        fetch("  https://api.cloudinary.com/v1_1/dnceb1qqy/image/upload",{
-        method:"post",
-        body: data
+        data.append("cloud_name", "dnceb1qqy")
+        fetch("https://api.cloudinary.com/v1_1/dnceb1qqy/image/upload", {
+            method: "post",
+            body: data
         })
-        .then(resp => resp.json())
-        .then(data => {
-        setUrl(data.url)
-        })
-        .catch(err => console.log(err))
-        }
-    
+            .then(resp => resp.json())
+            .then(data => {
+                setUrl(data.url)
+            })
+            .catch(err => console.log(err))
+    }
+
     const handleSubmit = (e) => {
         console.log('Form submitted')
         e.preventDefault();
@@ -50,7 +50,7 @@ function NewListing () {
                 seller_id: "1",
                 is_firm: "0",
                 item_neighbourhood: itemNeighbourhood,
-                is_sold: "1"
+                is_sold: "0"
             })
             .then((res) => {
                 console.log(res);
@@ -81,7 +81,7 @@ function NewListing () {
                                 <div className="contact_form-container">
                                     <div>
                                         <input
-                                            placeholder='Name Whatever Price You Think Is Fair'
+                                            placeholder='Name Your Price'
                                             name='price'
                                             value={price}
                                             onChange={(e) => setPrice(e.target.value)}
@@ -105,7 +105,7 @@ function NewListing () {
                                     </div>
                                     <div>
                                         <input
-                                            placeholder='Describe Your Item, Including the Condition'
+                                            placeholder='Condition'
                                             name='item_description'
                                             value={itemDescription}
                                             onChange={(e) => setItemDescription(e.target.value)}
@@ -113,18 +113,41 @@ function NewListing () {
                                     </div>
                                     <div>
                                         <input
-                                            placeholder='List the Neighbourhood Your Selling In'
+                                            placeholder='Neighbourhood'
                                             name='item_neighbourhood'
                                             value={itemNeighbourhood}
                                             onChange={(e) => setItemNeighbourhood(e.target.value)}
                                         />
                                     </div>
                                     <div>
-                                        <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
-                                        <button onClick={uploadImage}>Upload</button>
-                                        <h2 className="font-weight-bold">Uploaded image will be displayed here</h2>
-                                        <img src={url} alt="description"/>
+                                        <input 
+                                            type="radio"
+                                            name='isFirm'
+                                            id='flexible'
+                                            value="0"
+                                        />
+                                        <label for="flexible">Price Flexible</label>
+                                    
+                                        <input 
+                                            type="radio"
+                                            name='isFirm'
+                                            id='firm'
+                                            value="1"
+                                        />
+                                        <label for="firm">Price Firm</label>
                                     </div>
+                                    <div>
+                                        <input 
+                                            type="file" 
+                                            onChange= {(e)=> setImage(e.target.files[0])}
+                                            
+                                        />
+                                        <button onClick={uploadImage}>Upload Image</button>
+                                        <img class="card-img-top" src={url} alt="description"/>
+                                    </div>
+                                    <input type="reset"/>
+
+
                                     <div className="mt-5">
                                         <button type="submit">
                                             POST ITEM
