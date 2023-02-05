@@ -3,10 +3,10 @@ import React from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 
-import '../../css/bootstrap.css';
+// import '../../css/bootstrap.css';
 
-import '../../css/style.css';
-import '../../css/responsive.css';
+// import '../../css/style.css';
+// import '../../css/responsive.css';
 
 
 function NewListing () {
@@ -145,11 +145,11 @@ function NewListing () {
                                     </div> */}
                                     <div id="paymentContainer" name="paymentContainer" class="paymentOptions">
 
-                                        <div id="payCC" class="floatBlock">
+                                        <div id="payCC" class="radio-inline">
                                             <label for="paymentCC"> <input id="paymentCC" name="isFirm" type="radio" value="0" checked={isFirm === "0"} onChange={(e) => setIsFirm(e.target.value)}/>  Price Is Flexible  </label>
                                         </div>
 
-                                        <div id="payInvoice" class="floatBlock">
+                                        <div id="payInvoice" class="radio-inline">
                                             <label for="paymentInv"> <input id="paymentInv" name="isFirm" type="radio" value="1" checked={isFirm === "1"} onChange={(e) => setIsFirm(e.target.value)}/> Price Is Firm </label>
                                         </div>
 
@@ -160,19 +160,19 @@ function NewListing () {
                                             onChange= {(e)=> setImage(e.target.files[0])}
                                             
                                         />
-                                        <button type='button' onClick={uploadImage}>Upload Image</button>
-                                        <img class="card-img-top" src={url} alt="description"/>
-                                    {/* </div> */}
-                                    <div className="mt-2">
-                                        <button type="reset" classname="btn btn-secondary">
-                                            RESET
-                                        </button>
-                                    </div>
+                                        <img class="card-img-top" src={url} alt="description"/><br/>
 
-                                    <div className="mt-2">
-                                        <button type="submit" className='btn btn-secondary'>
-                                            POST ITEM
-                                        </button>
+                                        <button type='button' class="btn btn-info" onClick={uploadImage}>Upload Image</button>
+                                        
+                                    {/* </div> */}
+
+                                    <div className="mt-1">
+                                        <input type="reset" class="btn btn-info">
+                                            
+                                        </input>
+                                        
+                                        <input type="submit" class="btn btn-info" value="POST ITEM"/>
+
                                     </div>
                                 </div>
                             </form>

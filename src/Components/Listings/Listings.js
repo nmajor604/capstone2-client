@@ -64,12 +64,12 @@ class Listings extends React.Component {
                           <p className="card-text">{item.item_description}</p>
                           <div className="card-text">${item.price}</div>
                           <div className="card-text">{item.item_neighbourhood}</div>
-                            <button onClick={(e) => this.buyItem(item.id, e)} className="custom_dark-btn">
-                              <p>BUY THIS ITEM</p>
+                            <button onClick={(e) => this.buyItem(item.id, e)} className="btn btn-primary">
+                              BUY THIS ITEM
                             </button>
-                            <button onClick={(e) => this.deleteItem(item.id, e)} className="custom_orange-btn">
+                            {/* <button onClick={(e) => this.deleteItem(item.id, e)} className="custom_orange-btn">
                               <p>DELETE THIS ITEM</p>
-                            </button>
+                            </button> */}
                         </div>
                       </div>
                     </>
