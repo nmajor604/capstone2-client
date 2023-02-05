@@ -3,9 +3,10 @@ import React from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 
+import '../../css/bootstrap.css';
+
 import '../../css/style.css';
 import '../../css/responsive.css';
-import '../../css/bootstrap.css';
 
 
 function NewListing () {
@@ -121,7 +122,7 @@ function NewListing () {
                                             onChange={(e) => setItemNeighbourhood(e.target.value)}
                                         />
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <input 
                                             type="radio"
                                             name='isFirm'
@@ -141,21 +142,35 @@ function NewListing () {
                                             onChange={(e) => setIsFirm(e.target.value)}
                                         />
                                         <label for="firm">Price Firm</label>
+                                    </div> */}
+                                    <div id="paymentContainer" name="paymentContainer" class="paymentOptions">
+
+                                        <div id="payCC" class="floatBlock">
+                                            <label for="paymentCC"> <input id="paymentCC" name="isFirm" type="radio" value="0" checked={isFirm === "0"} onChange={(e) => setIsFirm(e.target.value)}/>  Price Is Flexible  </label>
+                                        </div>
+
+                                        <div id="payInvoice" class="floatBlock">
+                                            <label for="paymentInv"> <input id="paymentInv" name="isFirm" type="radio" value="1" checked={isFirm === "1"} onChange={(e) => setIsFirm(e.target.value)}/> Price Is Firm </label>
+                                        </div>
+
                                     </div>
-                                    <div>
+                                    {/* <div> */}
                                         <input 
                                             type="file" 
                                             onChange= {(e)=> setImage(e.target.files[0])}
                                             
                                         />
-                                        <button onClick={uploadImage}>Upload Image</button>
+                                        <button type='button' onClick={uploadImage}>Upload Image</button>
                                         <img class="card-img-top" src={url} alt="description"/>
+                                    {/* </div> */}
+                                    <div className="mt-2">
+                                        <button type="reset" classname="btn btn-secondary">
+                                            RESET
+                                        </button>
                                     </div>
-                                    <input type="reset"/>
 
-
-                                    <div className="mt-5">
-                                        <button type="submit">
+                                    <div className="mt-2">
+                                        <button type="submit" className='btn btn-secondary'>
                                             POST ITEM
                                         </button>
                                     </div>

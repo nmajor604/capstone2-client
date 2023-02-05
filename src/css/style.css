@@ -449,6 +449,38 @@ a:focus {
 
 /* end info section */
 
+/* new listing radio buttons */
+
+
+label {
+  display: block;
+  color: #7d7d7d;
+}
+
+.floatBlock {
+  margin: 0 1.81em 0 0;
+}
+
+.labelish {
+	color:#7d7d7d;
+	margin: 0;
+}
+
+.paymentOptions {
+	border: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	break-before: always;
+	margin: 0 0 3em 0;
+}
+
+#purchaseOrder {
+	margin: 0 0 2em 0;
+}
+
+
+/* end new listing radio buttons */
 
 /* footer section*/
 
