@@ -18,17 +18,6 @@ class SellerHome extends React.Component {
 
   }
 
-  buyItem(id, item) {
-    axios
-      .patch(`http://localhost:5050/${id}`, { "is_sold": "1"})
-      .then((res) => {
-      const sellerListings = this.state.sellerListings.filter(item.id !== id);
-      this.setState({ sellerListings });
-      console.log(this.state.sellerListings)
-      console.log('Item Sold!');
-    });
-  }
-
   deleteItem(id) {
     axios.delete(`http://localhost:5050/listings/${id}`)
       .then((res) => {
@@ -42,7 +31,7 @@ class SellerHome extends React.Component {
         <>
           <section className="service_section layout_padding ">
             <div className="container">
-              <h2 className="custom_heading">Listings</h2>
+              <h2 className="custom_heading">Seller Profile</h2>
               <p className="custom_heading-text">
                 Once you find something you want, just click 'Buy Now' to send a purchase request directly to the seller. No need to exchange endless emails ever again! 
               </p>
@@ -64,9 +53,6 @@ class SellerHome extends React.Component {
                         <p className="card-text">{item.item_description}</p>
                         <div className="card-text">${item.price}</div>
                         <div className="card-text">{item.item_neighbourhood}</div>
-                          <button onClick={(e) => this.buyItem(item.id, e)} className="btn btn-primary">
-                            BUY THIS ITEM
-                          </button>
                           <button onClick={(e) => this.deleteItem(item.id, e)} className="custom_orange-btn">
                             <p>DELETE THIS ITEM</p>
                           </button>
@@ -80,11 +66,7 @@ class SellerHome extends React.Component {
             </div>
 
           </section>
-          <div className="d-flex justify-content-center">
-      <a href="/listings" className="custom_dark-btn">
-        Show More
-      </a>
-    </div>
+          
         </>
       )
   }
