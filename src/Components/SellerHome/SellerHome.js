@@ -33,7 +33,7 @@ class SellerHome extends React.Component {
             <div className="container">
               <h2 className="custom_heading">Seller Profile</h2>
               <p className="custom_heading-text">
-                Once you find something you want, just click 'Buy Now' to send a purchase request directly to the seller. No need to exchange endless emails ever again! 
+                 All items you post for sale will initially appear here 
               </p>
               <div className="layout_padding2">
               <div className="card-deck">
@@ -67,6 +67,41 @@ class SellerHome extends React.Component {
 
           </section>
           
+          <section className="service_section layout_padding ">
+            <div className="container">
+              <h2 className="custom_heading">Seller Profile</h2>
+              <p className="custom_heading-text">
+                 Whenever someone buys one of your items, they will appear here: 
+              </p>
+              <div className="layout_padding2">
+              <div className="card-deck">
+                  {this.state.sellerListings.map((item) => (
+                  <>
+                    <div className="card">
+                        <img
+                        className="card-img-top"
+                        src={item.image} 
+                        alt="description"
+                        
+                         />
+                      <div className="card-body">
+                        <div key={item.id}>
+                          <h5 className="card-title">{item.item_name}</h5>
+                        </div>
+                        <p className="card-text">{item.item_description}</p>
+                        <div className="card-text">${item.price}</div>
+                        <div className="card-text">{item.item_neighbourhood}</div>
+                          
+                      </div>
+                    </div>
+                  </>
+                ))}
+                
+                </div>
+            </div>
+            </div>
+
+          </section>
         </>
       )
   }
