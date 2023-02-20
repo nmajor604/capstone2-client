@@ -14,15 +14,15 @@ import SellerHome from '../Components/SellerHome/SellerHome';
 import Contact from '../Components/Contact';
 
 // import RegLogin from '../Components/RegLogin/RegLogin';
-import useToken from './useToken';
+// import useToken from './useToken';
 
 function App () {
 
-  const { token, setToken } = useToken();
+  // const { token, setToken } = useToken();
 
-  if(!token) {
-    return <Login setToken={setToken} />
-  }
+  // if(!token) {
+  //   return <Login setToken={setToken} />
+  // }
 
     return (
           <Router>
