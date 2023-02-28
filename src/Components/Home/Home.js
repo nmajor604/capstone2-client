@@ -2,6 +2,7 @@ import React from 'react';
 
 import hero from '../../images/garage_sale.jpg';
 import { Link } from 'react-router-dom';
+import Contact from '../Contact';
 
 import '../../css/style.css';
 import '../../css/responsive.css';
@@ -102,7 +103,7 @@ function Home() {
         Piqued your interest? Sign up today and join 1000s of others!
       </p>
       <div class="d-flex justify-content-center">
-      <Link to="/contact">
+      <Link to={ Contact }>
         <button className="text-uppercase custom_dark-btn">
           Contact Us!
         </button>

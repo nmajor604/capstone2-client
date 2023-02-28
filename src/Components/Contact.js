@@ -53,7 +53,7 @@ function Contact() {
                         </div>
                         <div class="mt-5">
                         <button type="submit">
-                            send
+                            Send
                         </button>
                         </div>
                     </div>
