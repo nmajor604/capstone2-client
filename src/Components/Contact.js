@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-import favicon from '../images/favicon-32x32.png';
 
 import '../css/style.css';
 import '../css/responsive.css';
@@ -10,11 +9,6 @@ import '../css/bootstrap.css';
 function Contact() {
 
     return (
-
-
-
-
-
 
         <section class="contact_section layout_padding">
             <div class="container">
