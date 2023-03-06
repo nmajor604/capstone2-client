@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const NewSeller = () => {
 
     const [seller, setSeller] = useState('');
     const [pwd, setPwd] = useState('');
-    const [confPwd, setConfPwd] = useState('');
+    // const [confPwd, setConfPwd] = useState('');
 
     const handleSubmit = async (e) => {
         console.log('User registered')
@@ -57,7 +57,7 @@ const NewSeller = () => {
                           <input 
                             type="password" 
                             placeholder="Confirm Password" 
-                            onChange={e => setConfPwd(e.target.value)}
+                            // onChange={e => setConfPwd(e.target.value)}
                           />
                         </div>
                         <div className="mt-5">
