@@ -52,9 +52,9 @@ function Contact() {
                         />
                         </div>
                         <div class="mt-5">
-                        <button type="submit">
+                        <Button className="primary" onClick={handleShow}>
                             Send
-                        </button>
+                        </Button>
                         </div>
                     </div>
 
@@ -65,25 +65,21 @@ function Contact() {
             </div>
             </div>
             <>
-      <Button className="nextButton" onClick={handleShow}>
-        Open Modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header >
+                    <Modal.Title>Thanks for your feedback!</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Our goal is to respond within 48 hours.</Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="primary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    {/* <Button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </Button> */}
+                    </Modal.Footer>
+                </Modal>
+            </>
         </section>
 
   )
