@@ -14,6 +14,24 @@ function Contact() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const handleSubmit = async (e) => {
+        console.log('User registered')
+        e.preventDefault();
+         axios
+         .post('http://localhost:5050/sellers', {
+            seller: seller,
+            password: pwd
+         })
+         .then((res) => {
+            console.log(res);
+         })
+         .catch((err) => {
+            console.log(err);
+         });
+
+         e.target.reset();
+    }
+
     return (
 
         <section class="contact_section layout_padding">
