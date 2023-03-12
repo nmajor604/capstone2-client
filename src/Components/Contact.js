@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+
 // import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Modal, Button} from 'react-bootstrap';
@@ -14,13 +16,20 @@ function Contact() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
     const handleSubmit = async (e) => {
         console.log('User registered')
         e.preventDefault();
          axios
-         .post('http://localhost:5050/sellers', {
-            seller: seller,
-            password: pwd
+         .post('http://localhost:5050/comments', {
+            name: name,
+            phone: phone,
+            email: email,
+            message: message
          })
          .then((res) => {
             console.log(res);
@@ -41,25 +50,34 @@ function Contact() {
             </h2>
             <div class="row">
                 <div class="col-md-8 mr-auto">
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <div class="contact_form-container">
                     <div>
                         <div>
                         <input 
                             type="text" 
                             placeholder="Name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+
                         />
                         </div>
                         <div>
                         <input 
                             type="text" 
                             placeholder="Phone Number"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+
                         />
                         </div>
                         <div>
                         <input 
                             type="email" 
                             placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+
                         />
                         </div>
 
@@ -67,6 +85,9 @@ function Contact() {
                         <input 
                             type="text" 
                             placeholder="Message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+
                         />
                         </div>
                         <div class="mt-5">
