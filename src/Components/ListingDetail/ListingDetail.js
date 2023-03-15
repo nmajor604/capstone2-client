@@ -1,7 +1,7 @@
 import React from "react";
 
-function ListingDetail () {
-
+const ListingDetail = prop => {
+    const { item } = item;
     return(
 
         <div className="card">

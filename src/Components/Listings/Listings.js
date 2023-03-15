@@ -4,6 +4,7 @@ import axios from "axios";
 import '../../css/style.css';
 import '../../css/responsive.css';
 import '../../css/bootstrap.css';
+import ListingDetail from "../ListingDetail/ListingDetail";
 
 class Listings extends React.Component {
     state = {
@@ -48,8 +49,11 @@ class Listings extends React.Component {
                 </p>
                 <div className="layout_padding2">
                 <div className="card-deck">
-                    {this.state.currentListings.map((item) => (
-                      <ProductItem
+                    {this.state.currentListings.map((item, index) => (
+                      <ListingDetail
+                      item = {item}
+                      key={index}
+
                       
                     />
                     
