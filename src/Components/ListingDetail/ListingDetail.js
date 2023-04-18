@@ -3,7 +3,9 @@ import React from "react";
 const ListingDetail = prop => {
     const { item } = item;
     return(
-
+        /*
+        Renders individual items into their own card component
+        */
         <div className="card">
             <img
             className="card-img-top"

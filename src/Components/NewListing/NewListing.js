@@ -22,6 +22,10 @@ function NewListing () {
     const [image, setImage ] = useState("");
     const [ url, setUrl ] = useState("");
 
+    /*
+    Uploads selected image file to cloudinary account
+    */
+
     const uploadImage = (e) => {
         e.preventDefault();
 

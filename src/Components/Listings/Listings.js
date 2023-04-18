@@ -19,6 +19,9 @@ class Listings extends React.Component {
  
     }
 
+    /*
+    Function that changes is_sold status of item to 'true'
+    */
     buyItem(id, item) {
       axios
         .patch(`http://localhost:5050/${id}`, { "is_sold": "1"})
