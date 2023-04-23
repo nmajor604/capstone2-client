@@ -10,6 +10,12 @@ class SellerHome extends React.Component {
       sellerListings: [],
   };
 
+/**
+ * Similar to the listings page, the SellerHome component displays all the listings for a given seller
+ * 
+ */
+
+
   componentDidMount() {
       axios.get('http://localhost:5050/listings').then((res) => {
           this.setState({ sellerListings: res.data });

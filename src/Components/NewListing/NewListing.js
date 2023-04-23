@@ -44,6 +44,8 @@ function NewListing () {
             .catch(err => console.log(err))
     }
 
+
+    
     const handleSubmit = (e) => {
         console.log('Form submitted')
         e.preventDefault();
@@ -69,7 +71,10 @@ function NewListing () {
         e.target.reset();
         };
     
-
+        /**
+         * Basic react form for posting new items to listings database
+         *  
+         */
     
     
         return(

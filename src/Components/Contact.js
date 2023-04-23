@@ -103,7 +103,11 @@ function Contact() {
                 </div>
             </div>
             </div>
+
             <>
+                /**
+                Small modal window that pops up once user has submitted the comments form
+                 */
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header >
                     <Modal.Title>Thanks for your feedback!</Modal.Title>
