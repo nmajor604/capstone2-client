@@ -131,7 +131,10 @@ function NewListing () {
                                             onChange={(e) => setItemNeighbourhood(e.target.value)}
                                         />
                                     </div>
-                                    {/* <div>
+                                    {/* 
+                                        Radio buttons that allow users to choose if the item price is firm or flexible.
+
+                                        <div>
                                         <input 
                                             type="radio"
                                             name='isFirm'

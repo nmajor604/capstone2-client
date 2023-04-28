@@ -1,3 +1,10 @@
+/**
+ * Prototype of simple React modal that confirms to user that comments form was successfully submitted
+ * 
+ */
+
+
+
 import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Modal, Button} from 'react-bootstrap';

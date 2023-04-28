@@ -26,7 +26,13 @@ const NewSeller = () => {
     }
 
         return(
+
+          /**
+           * Simple React form for new sellers to sign up to site and start selling. Adds their credentials to sellers database
+           */
           <>
+
+          
             <section className="contact_section layout_padding">
               <div className='container'>
                 <h2 className="font-weight-bold">
